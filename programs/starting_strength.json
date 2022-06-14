@@ -2,7 +2,7 @@
   "title" : "Starting Strength",
   "exercises" : [{
     "name" : "Squats",
-    "max" : 600,
+    "max" : 400,
     "workouts" : [{
         "sets" : "2",
         "reps" : "5",
@@ -21,12 +21,20 @@
         "multiplier" : 0.8
       }, {
         "sets" : "3",
+        "reps" : "1",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "3",
+        "reps" : "3",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "3",
         "reps" : "5",
         "multiplier" : 1.0
       }]
     },{
     "name" : "Bench",
-    "max" : 500,
+    "max" : 300,
     "workouts": [{
         "sets" : "2",
         "reps" : "5",
@@ -45,16 +53,25 @@
         "multiplier" : 0.9
       }, {
         "sets" : "3",
+        "reps" : "1",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "3",
+        "reps" : "3",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "3",
         "reps" : "5",
         "multiplier" : 1.0
       }]
     },{
     "name" : "Deadlifts",
-    "max" : 700,
+    "max" : 500,
     "workouts" : [{
         "sets" : "2",
         "reps" : "5",
-        "multiplier" : 0.4
+        "multiplier" : 0.4,
+        "minimum" : 135
       }, {
         "sets" : "1",
         "reps" : "3",
@@ -65,12 +82,20 @@
         "multiplier" : 0.85
       }, {
         "sets" : "1",
+        "reps" : "1",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "1",
         "reps" : "5",
         "multiplier" : 1.0
       }]
     },{
     "name" : "Press",
-    "max" : 400, 
+    "max" : 180, 
     "workouts" : [{
         "sets" : "2",
         "reps" : "5",
@@ -89,12 +114,20 @@
         "multiplier" : 0.85
       }, {
         "sets" : "3",
+        "reps" : "1",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "3",
+        "reps" : "3",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "3",
         "reps" : "5",
         "multiplier" : 1.0
       }]
     },{
     "name" : "Power Cleans",
-    "max" : 500, 
+    "max" : 300, 
     "workouts" : [{
         "sets" : "2",
         "reps" : "5",

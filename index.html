@@ -5,11 +5,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>WarmupReps.com</title> 
+	<title>Barbell Warm-Ups/Sets</title> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<link rel="apple-touch-icon" href="/images/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="scripts/jquery.cookie.js"></script>
@@ -24,17 +24,6 @@
 		}
 	</style>
 
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-2960497-9']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
 
 	<script type="text/javascript">
 
@@ -57,13 +46,22 @@
 				if (warmupApp.metric)
 					return [20, 15, 10, 5, 2.5, 1.25];
 				else
-					return [45, 35, 25, 10, 5, 2.5];
+					return [45, 25, 10, 5, 2.5];
 			},
 			"programs" : []
 		}
 
 		$(document).ready(function() {
 			location.hash = '';
+			
+			$.ajax({
+				url: 'programs/conjugate.json',
+				dataType: 'json',
+				success: function(data) {
+			    warmupApp.programs.push(data);
+				},
+				async: false
+			});
 
 			$.ajax({
 				url: 'programs/starting_strength.json',
@@ -85,15 +83,6 @@
 
 			$.ajax({
 				url: 'programs/max_single.json',
-				dataType: 'json',
-				success: function(data) {
-			    warmupApp.programs.push(data);
-				},
-				async: false
-			});
-			
-			$.ajax({
-				url: 'programs/greyskull_lp.json',
 				dataType: 'json',
 				success: function(data) {
 			    warmupApp.programs.push(data);
@@ -145,7 +134,7 @@
 
 				//generate page for program
 				$('body').append('<div data-role="page" id="' + shortTitle + '"> \
-					<div data-role="header"><h1>WarmupReps.com</h1> \
+					<div data-role="header"><h1>Barbell Warm-Ups/Sets</h1> \
 					<a href="#main" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a></div> \
 					<div data-role="content"> \
 					<h2>' + warmupApp.programs[i].title + '</h2> \
@@ -171,7 +160,7 @@
 
 					//generate page for each exercise
 					$('body').append('<div data-role="page" id="' + shortTitle + "-" + shortExerciseName + '"> \
-						<div data-role="header"><h1>WarmupReps.com</h1> \
+						<div data-role="header"><h1>Barbell Warm-Ups/Sets</h1> \
 						<a href="#main" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a></div> \
 						<div data-role="content"><h2>' + warmupApp.programs[i].exercises[j].name + '</h2> \
 						<p>Choose your working weight.  Your warmup sets will then be calculated as well as the weights you need to put on each bar side.</p>	\
@@ -198,15 +187,32 @@
 						updateWorkout($(this).parent().siblings('ul'), $(this).val());
 					})
 
+					var volume = 0;
+					var output = '';
+					
 					//add each set
 					for (k = 0; k < warmupApp.programs[i].exercises[j].workouts.length; k++) {
 						var workout = warmupApp.programs[i].exercises[j].workouts[k];
-						var setWeight = findWeight(workout, $('#' + shortTitle + '-' + shortExerciseName + '-weight').val());
 
-						$('#' + shortTitle + "-" + shortExerciseName + '-warmup').append('<li>' + 
-							printSet(workout.sets, workout.reps, setWeight) + 
-							' (' + calculateBarbellWeights(setWeight) + ')</li>');
+						if(workout.multiplier == -1) {
+							output = '<li style="color: #fff;background-image: linear-gradient(#666,#333);">' + workout.name + '</li>';
+						}
+						else {
+							var setWeight = findWeight(workout, $('#' + shortTitle + '-' + shortExerciseName + '-weight').val());
+							volume = volume + getVolume(workout.sets,workout.reps,setWeight);
+							
+							output = '<li>' + printSet(workout.sets, workout.reps, setWeight) + ' (' + calculateBarbellWeights(setWeight) + ')';
+							if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
+								output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight, 1) + '</li>';
+							}
+						}
+						$('#' + shortTitle + "-" + shortExerciseName + '-warmup').append(output);
+													
 					}
+					
+					//$('#' + shortTitle + "-" + shortExerciseName + '-warmup').append('<li>Total Volume: ' + getSystem(volume) + ' kg</li>');
+					
+						
 				}							
 			}
 
@@ -215,6 +221,24 @@
 			$('#main').page("destroy").page();
 
 		});
+		
+		function getSystem(str) {
+			if(warmupApp.metric)
+				str += " kg";
+			else 
+				str += " lbs";
+				
+			return str;
+		}
+		
+		function getVolume(sets,reps,weight,display = 0) {
+			var volume = sets * reps * weight;
+			
+			if(display)
+				volume = getSystem(volume);
+				
+			return volume;
+		}
 
 		function initializePreferences() {
 			if ($.cookie('bar_type') != undefined) {
@@ -265,15 +289,29 @@
 			}
 
 			list.empty();
-
+			
+			var volume = 0;
+			var output = '';
+			
 			for (i = 0; i < workouts.length; i++) {
 				var workout = workouts[i];
-				var setWeight = findWeight(workout, weight);
-
-				list.append('<li>' + 
-					printSet(workout.sets, workout.reps, setWeight) + 
-					' (' + calculateBarbellWeights(setWeight) + ')</li>');
+			
+				if(workout.multiplier == -1) {
+					output = '<li style="color: #fff;background-image: linear-gradient(#666,#333);">' + workout.name + '</li>';
+				}
+				else {
+					var setWeight = findWeight(workout, weight);
+					volume = volume + getVolume(workout.sets,workout.reps,setWeight);
+					
+					output = '<li>' + printSet(workout.sets, workout.reps, setWeight) + ' (' + calculateBarbellWeights(setWeight) + ')';
+					if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
+						output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight, 1) + '</li>';
+					}
+				}
+				
+				list.append(output);
 			}
+			//list.append('<li>Total Volume: ' + getSystem(volume) + '</li>');
 			
 			try
 			{
@@ -360,7 +398,9 @@
 		}
 
 		function findWeight(exercise, weight) {
-			if (exercise.multiplier != undefined)
+			if (exercise.multiplier != undefined  && exercise.minimum > 1 && roundDown(exercise.multiplier * weight) < exercise.minimum)
+				return exercise.minimum;
+			else if (exercise.multiplier != undefined )
 				return roundDown(exercise.multiplier * weight);
 			else
 				return exercise.weight;
@@ -368,6 +408,7 @@
 		
 		function printSet(sets, reps, weight) {
 			var output = sets + "x" + reps + " " + weight;
+			
 			if (warmupApp.metric)
 				return output + " kgs"
 			else 
@@ -391,7 +432,7 @@
 <div data-role="page" id="main">
 
 	<div data-role="header">
-		<h1>WarmupReps.com</h1>
+		<h1>Barbell Warm-Ups/Sets</h1>
 	</div>
 
 	<div data-role="content" >	
@@ -417,6 +458,7 @@
 	     	<input type="radio" name="units" id="units-kilograms" value="kgs"  />
 	     	<label for="units-kilograms">Kilograms</label>
 	    </fieldset>
+	    
 	    <fieldset data-role="controlgroup" data-type="horizontal" >
 			<legend>Bar type (in lbs):</legend>
 	     	<input type="radio" name="bar-type" id="bar-type-olympic" value="45" />
@@ -432,6 +474,7 @@
 	     	<label for="bar-type-technique">Technique (15)</label>
 
 			</fieldset>
+			
 		</div>
 
 	</div>

@@ -2,7 +2,7 @@
   "title" : "Max Single",
   "exercises" : [{
     "name" : "Squats",
-    "max" : 600,
+    "max" : 400,
     "workouts" : [{
         "sets" : "1",
         "reps" : "5",
@@ -33,8 +33,8 @@
         "multiplier" : 1.0
       }]
     },{
-    "name" : "Bench Press",
-    "max" : 500,
+    "name" : "Bench",
+    "max" : 300,
     "workouts" : [{
         "sets" : "1",
         "reps" : "5",
@@ -66,7 +66,7 @@
       }]
     },{
     "name" : "Deadlifts",
-    "max" : 700,
+    "max" : 500,
     "workouts" : [{
         "sets" : "1",
         "reps" : "5",

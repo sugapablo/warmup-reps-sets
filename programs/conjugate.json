@@ -1,0 +1,325 @@
+{
+  "title" : "Conjugate",
+  "exercises" : [{
+    "name" : "Squats",
+    "max" : 500,
+    "workouts" : [{
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Max Effort (4 x 90% or more)",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.36
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.54
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.72
+      }, {
+        "sets" : "1",
+        "reps" : "1",
+        "multiplier" : 0.9
+      }, {
+        "sets" : "1",
+        "reps" : "1",
+        "multiplier" : 1
+      },{
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 60%",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.24
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.36
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.48
+      }, {
+        "sets" : "12",
+        "reps" : "2",
+        "multiplier" : 0.6,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 65%",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.26
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.39
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.52
+      }, {
+        "sets" : "12",
+        "reps" : "2",
+        "multiplier" : 0.65,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 70%",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.28
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.42
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.56
+      }, {
+        "sets" : "9",
+        "reps" : "2",
+        "multiplier" : 0.7,
+        "workset": 1
+      }]
+    },{
+    "name" : "Bench",
+    "max" : 300,
+    "workouts": [{
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Max Effort (4 x 90% or more)",
+        "multiplier" : -1
+      }, {
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.45
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.63
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.81
+      }, {
+        "sets" : "1",
+        "reps" : "1",
+        "multiplier" : 0.9
+      }, {
+        "sets" : "1",
+        "reps" : "1",
+        "multiplier" : 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 60%",
+        "multiplier" : -1
+      }, {
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.3
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.42
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.54
+      }, {
+        "sets" : "8",
+        "reps" : "3",
+        "multiplier" : 0.6,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 65%",
+        "multiplier" : -1
+      }, {
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.325
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.455
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.585
+      }, {
+        "sets" : "8",
+        "reps" : "3",
+        "multiplier" : 0.65,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 70%",
+        "multiplier" : -1
+      }, {
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.35
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.49
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.63
+      }, {
+        "sets" : "6",
+        "reps" : "3",
+        "multiplier" : 0.7,
+        "workset" : 1
+      }]
+    },{
+    "name" : "Deadlifts",
+    "max" : 600,
+    "workouts" : [ {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Max Effort (4 x 90% or more)",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0.36,
+        "minimum" : 135
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.54
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.765
+      }, {
+        "sets" : "1",
+        "reps" : "1",
+        "multiplier" : 0.9
+      }, {
+        "sets" : "1",
+        "reps" : "1",
+        "multiplier" : 1.0
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 60%",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0.24,
+        "minimum" : 135
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.36
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.51
+      }, {
+        "sets" : "12",
+        "reps" : "2",
+        "multiplier" : 0.6,
+        "workset" : 1
+      },{
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 65%",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0.26,
+        "minimum" : 135
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.39
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.5525
+      }, {
+        "sets" : "12",
+        "reps" : "2",
+        "multiplier" : 0.65,
+        "workset" : 1
+      },{
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 70%",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0.28,
+        "minimum" : 135
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.42
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.595
+      }, {
+        "sets" : "9",
+        "reps" : "2",
+        "multiplier" : 0.7,
+        "workset" : 1
+      }]
+  }]
+}
