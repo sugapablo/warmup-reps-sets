@@ -193,16 +193,12 @@
       "multiplier" : 0
     }, {
       "sets" : "1",
-      "reps" : "5",
-      "multiplier" : 0.2
-    }, {
-      "sets" : "1",
       "reps" : "3",
-      "multiplier" : 0.28
+      "multiplier" : 0.27
     }, {
       "sets" : "1",
       "reps" : "2",
-      "multiplier" : 0.36
+      "multiplier" : 0.38
     }, {
       "sets" : "8",
       "reps" : "1",
@@ -219,16 +215,12 @@
       "multiplier" : 0 
     }, {
       "sets" : "1",
-      "reps" : "5",
-      "multiplier" : 0.225
-    }, {
-      "sets" : "1",
       "reps" : "3",
-      "multiplier" : 0.315
+      "multiplier" : 0.3
     }, {
       "sets" : "1",
       "reps" : "2",
-      "multiplier" : 0.405
+      "multiplier" : 0.425
     }, {
       "sets" : "6",
       "reps" : "1",
@@ -243,18 +235,14 @@
       "sets" : "2",
       "reps" : "5",
       "multiplier" : 0
-    }, { 
-      "sets" : "1",
-      "reps" : "5",
-      "multiplier" : 0.248
     }, {
       "sets" : "1",
       "reps" : "3",
-      "multiplier" : 0.347
+      "multiplier" : 0.33
     }, {
       "sets" : "1",
       "reps" : "2",
-      "multiplier" : 0.446
+      "multiplier" : 0.468
     }, {
       "sets" : "4",
       "reps" : "1",
