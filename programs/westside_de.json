@@ -1,0 +1,265 @@
+{
+  "title" : "Westside DE",
+  "exercises" : [{
+    "name" : "Squats",
+    "max" : 500,
+    "workouts" : [{
+        "sets" : "0",
+        "reps" : "0",
+        "chains": 1,
+        "multiplier" : 0.25
+      },{
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 50% + chains",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.18
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.27
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.36
+      }, {
+        "sets" : "12",
+        "reps" : "2",
+        "multiplier" : 0.5,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 55% + chains",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.2
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.3
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.4
+      }, {
+        "sets" : "10",
+        "reps" : "2",
+        "multiplier" : 0.55,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 60% + chains",
+        "multiplier" : -1
+      },{
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.22
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.32
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.43
+      }, {
+        "sets" : "8",
+        "reps" : "2",
+        "multiplier" : 0.6,
+        "workset": 1
+      }]
+    },{
+    "name" : "Bench",
+    "max" : 500,
+      "workouts": [ {
+        "sets" : "0",
+        "reps" : "0",
+        "chains": 1,
+        "multiplier" : 0.25
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 45% + chains",
+        "multiplier" : -1
+      }, {
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.2
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.28
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.36
+      }, {
+        "sets" : "12",
+        "reps" : "3",
+        "multiplier" : 0.45,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 50% + chains",
+        "multiplier" : -1
+      }, {
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0 
+      }, {
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.225
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.315
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.405
+      }, {
+        "sets" : "10",
+        "reps" : "3",
+        "multiplier" : 0.5,
+        "workset": 1
+      }, {
+        "sets" : "0",
+        "reps" : "0",
+        "name" : "Dynamic Effort 55% + chains",
+        "multiplier" : -1
+      }, {
+        "sets" : "2",
+        "reps" : "5",
+        "multiplier" : 0
+      }, { 
+        "sets" : "1",
+        "reps" : "5",
+        "multiplier" : 0.248
+      }, {
+        "sets" : "1",
+        "reps" : "3",
+        "multiplier" : 0.347
+      }, {
+        "sets" : "1",
+        "reps" : "2",
+        "multiplier" : 0.446
+      }, {
+        "sets" : "8",
+        "reps" : "3",
+        "multiplier" : 0.55,
+        "workset" : 1
+      }]
+    },{
+    "name" : "Deadlifts",
+    "max" : 600,
+    "workouts" : [{
+      "sets" : "0",
+      "reps" : "0",
+      "chains": 1,
+      "multiplier" : 0.25
+    }, {
+      "sets" : "0",
+      "reps" : "0",
+      "name" : "Dynamic Effort 45% + chains",
+      "multiplier" : -1
+    }, {
+      "sets" : "2",
+      "reps" : "5",
+      "multiplier" : 0
+    }, {
+      "sets" : "1",
+      "reps" : "5",
+      "multiplier" : 0.2
+    }, {
+      "sets" : "1",
+      "reps" : "3",
+      "multiplier" : 0.28
+    }, {
+      "sets" : "1",
+      "reps" : "2",
+      "multiplier" : 0.36
+    }, {
+      "sets" : "8",
+      "reps" : "1",
+      "multiplier" : 0.45,
+      "workset": 1
+    }, {
+      "sets" : "0",
+      "reps" : "0",
+      "name" : "Dynamic Effort 50% + chains",
+      "multiplier" : -1
+    }, {
+      "sets" : "2",
+      "reps" : "5",
+      "multiplier" : 0 
+    }, {
+      "sets" : "1",
+      "reps" : "5",
+      "multiplier" : 0.225
+    }, {
+      "sets" : "1",
+      "reps" : "3",
+      "multiplier" : 0.315
+    }, {
+      "sets" : "1",
+      "reps" : "2",
+      "multiplier" : 0.405
+    }, {
+      "sets" : "6",
+      "reps" : "1",
+      "multiplier" : 0.5,
+      "workset": 1
+    }, {
+      "sets" : "0",
+      "reps" : "0",
+      "name" : "Dynamic Effort 55% + chains",
+      "multiplier" : -1
+    }, {
+      "sets" : "2",
+      "reps" : "5",
+      "multiplier" : 0
+    }, { 
+      "sets" : "1",
+      "reps" : "5",
+      "multiplier" : 0.248
+    }, {
+      "sets" : "1",
+      "reps" : "3",
+      "multiplier" : 0.347
+    }, {
+      "sets" : "1",
+      "reps" : "2",
+      "multiplier" : 0.446
+    }, {
+      "sets" : "4",
+      "reps" : "1",
+      "multiplier" : 0.55,
+      "workset" : 1
+    }]
+  }]
+}
