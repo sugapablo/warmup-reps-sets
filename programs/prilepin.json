@@ -1,12 +1,12 @@
 {
-  "title" : "Conjugate",
+  "title" : "Prilepin",
   "exercises" : [{
     "name" : "Squats",
     "max" : 500,
     "workouts" : [{
         "sets" : "0",
         "reps" : "0",
-        "name" : "Max Effort (4 x 90% or more)",
+        "name" : "Max Effort (4-10 x 90%+, 7 optimal)",
         "multiplier" : -1
       },{
         "sets" : "2",
@@ -26,7 +26,7 @@
         "multiplier" : 0.72
       }, {
         "sets" : "1",
-        "reps" : "1",
+        "reps" : "2",
         "multiplier" : 0.9
       }, {
         "sets" : "1",
@@ -54,8 +54,8 @@
         "reps" : "2",
         "multiplier" : 0.48
       }, {
-        "sets" : "12",
-        "reps" : "2",
+        "sets" : "9",
+        "reps" : "3",
         "multiplier" : 0.6,
         "workset": 1
       }, {
@@ -80,8 +80,8 @@
         "reps" : "2",
         "multiplier" : 0.52
       }, {
-        "sets" : "12",
-        "reps" : "2",
+        "sets" : "8",
+        "reps" : "3",
         "multiplier" : 0.65,
         "workset": 1
       }, {
@@ -106,8 +106,8 @@
         "reps" : "2",
         "multiplier" : 0.56
       }, {
-        "sets" : "9",
-        "reps" : "2",
+        "sets" : "6",
+        "reps" : "3",
         "multiplier" : 0.7,
         "workset": 1
       }]
@@ -117,7 +117,7 @@
     "workouts": [{
         "sets" : "0",
         "reps" : "0",
-        "name" : "Max Effort (4 x 90% or more)",
+        "name" : "Max Effort (4-10 x 90%+, 7 optimal)",
         "multiplier" : -1
       }, {
         "sets" : "2",
@@ -137,7 +137,7 @@
         "multiplier" : 0.81
       }, {
         "sets" : "1",
-        "reps" : "1",
+        "reps" : "2",
         "multiplier" : 0.9
       }, {
         "sets" : "1",
@@ -165,7 +165,7 @@
         "reps" : "2",
         "multiplier" : 0.54
       }, {
-        "sets" : "8",
+        "sets" : "9",
         "reps" : "3",
         "multiplier" : 0.6,
         "workset": 1
@@ -228,7 +228,7 @@
     "workouts" : [ {
         "sets" : "0",
         "reps" : "0",
-        "name" : "Max Effort (4 x 90% or more)",
+        "name" : "Max Effort (4-10 x 90%+, 7 optimal)",
         "multiplier" : -1
       },{
         "sets" : "2",
@@ -245,7 +245,7 @@
         "multiplier" : 0.765
       }, {
         "sets" : "1",
-        "reps" : "1",
+        "reps" : "2",
         "multiplier" : 0.9
       }, {
         "sets" : "1",
@@ -270,8 +270,8 @@
         "reps" : "2",
         "multiplier" : 0.51
       }, {
-        "sets" : "12",
-        "reps" : "2",
+        "sets" : "9",
+        "reps" : "3",
         "multiplier" : 0.6,
         "workset" : 1
       },{
@@ -293,8 +293,8 @@
         "reps" : "2",
         "multiplier" : 0.5525
       }, {
-        "sets" : "12",
-        "reps" : "2",
+        "sets" : "8",
+        "reps" : "3",
         "multiplier" : 0.65,
         "workset" : 1
       },{
@@ -316,8 +316,8 @@
         "reps" : "2",
         "multiplier" : 0.595
       }, {
-        "sets" : "9",
-        "reps" : "2",
+        "sets" : "6",
+        "reps" : "3",
         "multiplier" : 0.7,
         "workset" : 1
       }]

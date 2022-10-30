@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Barbell Warm-Ups/Sets</title> 
+	<title>sugapablo/Barbell Warm-Ups/Sets</title> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
 	<link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
@@ -55,7 +55,25 @@
 			location.hash = '';
 			
 			$.ajax({
-				url: 'programs/conjugate.json',
+				url: 'programs/5x5.json',
+				dataType: 'json',
+				success: function(data) {
+			    warmupApp.programs.push(data);
+				},
+				async: false
+			});
+
+			$.ajax({
+				url: 'programs/max_single.json',
+				dataType: 'json',
+				success: function(data) {
+			    warmupApp.programs.push(data);
+				},
+				async: false
+			});
+			
+			$.ajax({
+				url: 'programs/prilepin.json',
 				dataType: 'json',
 				success: function(data) {
 			    warmupApp.programs.push(data);
@@ -73,16 +91,7 @@
 			});
 
 			$.ajax({
-				url: 'programs/program_2.json',
-				dataType: 'json',
-				success: function(data) {
-			    warmupApp.programs.push(data);
-				},
-				async: false
-			});
-
-			$.ajax({
-				url: 'programs/max_single.json',
+				url: 'programs/westside_de.json',
 				dataType: 'json',
 				success: function(data) {
 			    warmupApp.programs.push(data);
@@ -188,6 +197,7 @@
 					})
 
 					var volume = 0;
+					var chain_volume = 0;
 					var output = '';
 					
 					//add each set
@@ -197,14 +207,21 @@
 						if(workout.multiplier == -1) {
 							output = '<li style="color: #fff;background-image: linear-gradient(#666,#333);">' + workout.name + '</li>';
 						}
+						else if(workout.chains == 1) {
+							var setWeight = findWeight(workout, $('#' + shortTitle + '-' + shortExerciseName + '-weight').val());
+							chain_volume += setWeight;
+						}
 						else {
 							var setWeight = findWeight(workout, $('#' + shortTitle + '-' + shortExerciseName + '-weight').val());
 							volume = volume + getVolume(workout.sets,workout.reps,setWeight);
-							
 							output = '<li>' + printSet(workout.sets, workout.reps, setWeight) + ' (' + calculateBarbellWeights(setWeight) + ')';
-							if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
-								output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight, 1) + '</li>';
+							if(chain_volume) { 
+								output += ' + up to ' + chain_volume + ' in chains.';
 							}
+							if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
+								output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight + chain_volume, 1);
+							}
+							output += '</li>'
 						}
 						$('#' + shortTitle + "-" + shortExerciseName + '-warmup').append(output);
 													
@@ -291,6 +308,7 @@
 			list.empty();
 			
 			var volume = 0;
+			var chain_volume = 0
 			var output = '';
 			
 			for (i = 0; i < workouts.length; i++) {
@@ -299,15 +317,23 @@
 				if(workout.multiplier == -1) {
 					output = '<li style="color: #fff;background-image: linear-gradient(#666,#333);">' + workout.name + '</li>';
 				}
+				else if(workout.chains == 1) {
+					var setWeight = findWeight(workout, weight);
+					chain_volume += setWeight;
+				}
 				else {
 					var setWeight = findWeight(workout, weight);
 					volume = volume + getVolume(workout.sets,workout.reps,setWeight);
 					
 					output = '<li>' + printSet(workout.sets, workout.reps, setWeight) + ' (' + calculateBarbellWeights(setWeight) + ')';
-					if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
-						output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight, 1) + '</li>';
-					}
-				}
+						if(chain_volume) { 
+							output += ' + up to ' + chain_volume + ' in chains.';
+						}
+						if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
+							output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight + chain_volume, 1);
+						}
+						output += '</li>'
+				}	
 				
 				list.append(output);
 			}
@@ -491,7 +517,8 @@
 		<h1 data>Credits</h1>
 	</div>
 	<div data-role="content">
-		<p>Written and maintained by Nicholas Munson &copy; 2012.<p>
+		<p>Written and maintained by Nicholas Munson &copy; 2012.</p>
+		<p>Additions/customizations added by Russ Schneider &copy; 2022</p>
 		<p>"Weight Lifting" symbol by Scott Lewis, from thenounproject.com collection.</p>
 		<a data-rel="back" data-role="button">Close</a>
 	</div>
