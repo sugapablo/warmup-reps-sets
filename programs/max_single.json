@@ -2,7 +2,7 @@
   "title" : "Max Single",
   "exercises" : [{
     "name" : "Squats",
-    "max" : 400,
+    "max" : 500,
     "workouts" : [{
         "sets" : "1",
         "reps" : "5",
@@ -34,7 +34,7 @@
       }]
     },{
     "name" : "Bench",
-    "max" : 300,
+    "max" : 500,
     "workouts" : [{
         "sets" : "1",
         "reps" : "5",

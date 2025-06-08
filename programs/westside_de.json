@@ -11,7 +11,7 @@
       },{
         "sets" : "0",
         "reps" : "0",
-        "name" : "Dynamic Effort 50% + chains",
+        "name" : "Dynamic Effort 50% + bands/chains",
         "multiplier" : -1
       },{
         "sets" : "2",
@@ -37,7 +37,7 @@
       }, {
         "sets" : "0",
         "reps" : "0",
-        "name" : "Dynamic Effort 55% + chains",
+        "name" : "Dynamic Effort 55% + bands/chains",
         "multiplier" : -1
       },{
         "sets" : "2",
@@ -63,7 +63,7 @@
       }, {
         "sets" : "0",
         "reps" : "0",
-        "name" : "Dynamic Effort 60% + chains",
+        "name" : "Dynamic Effort 60% + bands/chains",
         "multiplier" : -1
       },{
         "sets" : "2",
@@ -88,6 +88,111 @@
         "workset": 1
       }]
     },{
+      "name" : "Squats -10",
+      "max" : 500,
+      "workouts" : [{
+          "sets" : "0",
+          "reps" : "0",
+          "chains": 1,
+          "multiplier" : 0.25
+        },{
+          "sets" : "0",
+          "reps" : "0",
+          "name" : "Dynamic Effort 50% -10% + bands/chains",
+          "multiplier" : -1,
+          "minusten" : 1
+        },{
+          "sets" : "2",
+          "reps" : "5",
+          "multiplier" : 0,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "5",
+          "multiplier" : 0.18,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "3",
+          "multiplier" : 0.27,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "2",
+          "multiplier" : 0.36,
+          "minusten" : 1
+        }, {
+          "sets" : "12",
+          "reps" : "2",
+          "multiplier" : 0.5,
+          "workset": 1,
+          "minusten" : 1
+        }, {
+          "sets" : "0",
+          "reps" : "0",
+          "name" : "Dynamic Effort 55% -10% + bands/chains",
+          "multiplier" : -1,
+          "minusten" : 1
+        },{
+          "sets" : "2",
+          "reps" : "5",
+          "multiplier" : 0,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "5",
+          "multiplier" : 0.2,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "3",
+          "multiplier" : 0.3,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "2",
+          "multiplier" : 0.4,
+          "minusten" : 1
+        }, {
+          "sets" : "10",
+          "reps" : "2",
+          "multiplier" : 0.55,
+          "workset": 1,
+          "minusten" : 1
+        }, {
+          "sets" : "0",
+          "reps" : "0",
+          "name" : "Dynamic Effort 60% -10% + bands/chains",
+          "multiplier" : -1,
+          "minusten" : 1
+        },{
+          "sets" : "2",
+          "reps" : "5",
+          "multiplier" : 0,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "5",
+          "multiplier" : 0.22,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "3",
+          "multiplier" : 0.32,
+          "minusten" : 1
+        }, {
+          "sets" : "1",
+          "reps" : "2",
+          "multiplier" : 0.43,
+          "minusten" : 1
+        }, {
+          "sets" : "8",
+          "reps" : "2",
+          "multiplier" : 0.6,
+          "workset": 1,
+          "minusten" : 1
+        }]
+      },{
     "name" : "Bench",
     "max" : 500,
       "workouts": [ {
@@ -98,7 +203,7 @@
       }, {
         "sets" : "0",
         "reps" : "0",
-        "name" : "Dynamic Effort 45% + chains",
+        "name" : "Dynamic Effort 45% + bands/chains",
         "multiplier" : -1
       }, {
         "sets" : "2",
@@ -124,7 +229,7 @@
       }, {
         "sets" : "0",
         "reps" : "0",
-        "name" : "Dynamic Effort 50% + chains",
+        "name" : "Dynamic Effort 50% + bands/chains",
         "multiplier" : -1
       }, {
         "sets" : "2",
@@ -150,7 +255,7 @@
       }, {
         "sets" : "0",
         "reps" : "0",
-        "name" : "Dynamic Effort 55% + chains",
+        "name" : "Dynamic Effort 55% + bands/chains",
         "multiplier" : -1
       }, {
         "sets" : "2",
@@ -185,7 +290,7 @@
     }, {
       "sets" : "0",
       "reps" : "0",
-      "name" : "Dynamic Effort 45% + chains",
+      "name" : "Dynamic Effort 45% + bands/chains",
       "multiplier" : -1
     }, {
       "sets" : "2",
@@ -207,7 +312,7 @@
     }, {
       "sets" : "0",
       "reps" : "0",
-      "name" : "Dynamic Effort 50% + chains",
+      "name" : "Dynamic Effort 50% + bands/chains",
       "multiplier" : -1
     }, {
       "sets" : "2",
@@ -229,7 +334,7 @@
     }, {
       "sets" : "0",
       "reps" : "0",
-      "name" : "Dynamic Effort 55% + chains",
+      "name" : "Dynamic Effort 55% + bands/chains",
       "multiplier" : -1
     }, {
       "sets" : "2",

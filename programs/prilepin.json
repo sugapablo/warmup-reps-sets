@@ -113,7 +113,7 @@
       }]
     },{
     "name" : "Bench",
-    "max" : 300,
+    "max" : 500,
     "workouts": [{
         "sets" : "0",
         "reps" : "0",
