@@ -48,6 +48,7 @@
 				if (warmupApp.metric)
 					return [20, 15, 10, 5, 2.5, 1.25];
 				else
+					/* 35 lb plate removed as I don't use them */
 					return [45, 25, 10, 5, 2.5];
 			},
 			"programs" : []
@@ -74,14 +75,14 @@
 				async: false
 			});
 			
-			$.ajax({
+			/* $.ajax({
 				url: 'programs/prilepin.json',
 				dataType: 'json',
 				success: function(data) {
 			    warmupApp.programs.push(data);
 				},
 				async: false
-			});
+			}); */
 
 			$.ajax({
 				url: 'programs/starting_strength.json',
@@ -218,7 +219,7 @@
 							volume = volume + getVolume(workout.sets,workout.reps,setWeight);
 							output = '<li>' + printSet(workout.sets, workout.reps, setWeight) + ' (' + calculateBarbellWeights(setWeight) + ')';
 							if(chain_volume) { 
-								output += ' + up to ' + chain_volume + ' in chains.';
+								output += ' + up to ' + chain_volume + ' in bands/chains..';
 							}
 							if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
 								output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight + chain_volume, 1);
@@ -320,8 +321,9 @@
 					output = '<li style="color: #fff;background-image: linear-gradient(#666,#333);">' + workout.name + '</li>';
 				}
 				else if(workout.chains == 1) {
-					var setWeight = findWeight(workout, weight);
-					chain_volume += setWeight;
+					// var setWeight = findWeight(workout, weight);
+					// chain_volume += setWeight;
+					chain_volume = weight * .25
 				}
 				else {
 					var setWeight = findWeight(workout, weight);
@@ -329,7 +331,7 @@
 					
 					output = '<li>' + printSet(workout.sets, workout.reps, setWeight) + ' (' + calculateBarbellWeights(setWeight) + ')';
 						if(chain_volume) { 
-							output += ' + up to ' + chain_volume + ' in chains.';
+							output += ' + up to ' + chain_volume + ' in bands/chains.'; 
 						}
 						if((workout.multiplier == 1 && (workout.sets > 1 || workout.reps > 1)) || workout.workset == 1 ) { 
 							output += ' &middot; Volume: ' + getVolume(workout.sets, workout.reps, setWeight + chain_volume, 1);
@@ -353,6 +355,7 @@
 		}
 
 		function calculateBarbellWeights(weight) {
+			console.log("calculateBarbellWeights called with " + weight);
 			weight -= warmupApp.barWeight();
 
 			if (weight === 0)
@@ -427,13 +430,15 @@
 			}
 			if (exercise.multiplier != undefined  && exercise.minimum > 1 && roundDown(exercise.multiplier * weight) < exercise.minimum)
 				return exercise.minimum;
-			else if (exercise.multiplier != undefined )
+			else if (exercise.multiplier != undefined ) 
 				return roundDown(exercise.multiplier * weight);
-			else
+			else {
 				return exercise.weight;
+			}
 		}
 		
 		function printSet(sets, reps, weight) {
+			console.log("printSet called with " + sets + ", " + reps + ", " + weight);
 			var output = sets + "x" + reps + " " + weight;
 			
 			if (warmupApp.metric)
@@ -445,6 +450,10 @@
 		function roundDown(num) {
 			if (num - (num % warmupApp.stepSize()) < warmupApp.barWeight())
 				return warmupApp.barWeight();
+			else if (warmupApp.barWeight() == 58) {
+				num = num - 58;
+				return num - (num % warmupApp.stepSize()) + 58;
+			}
 			else
 				return num - (num % warmupApp.stepSize());
 		}		
@@ -492,7 +501,7 @@
 	     	<label for="bar-type-olympic">Olympic (45)</label>
 
 			<input type="radio" name="bar-type" id="bar-type-ssb" value="58" />
-	     	<label for="bar-type-ssb">Tital SSB (58)</label>
+	     	<label for="bar-type-ssb">Titan SSB (58)</label>
 	     	
 	     	<input type="radio" name="bar-type" id="bar-type-womens" value="35"  />
 	     	<label for="bar-type-womens">Womens (35)</label>
